@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+    transition: background-color 0.5s ease;
+  }
+  
+  header, nav, footer {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Header Animation */
+  #about-header h1 {
+    margin: 0;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Navigation Styling */
+  nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #007BFF;
+  }
+  
+  /* Section and Table Styles with Animation */
+  section {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    animation: zoomIn 0.8s ease;
+  }
+  
+  section img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #333;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Keyframes */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Responsive Design */
+  @media screen and (min-width: 1024px) {
+    body {
+      margin: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav {
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    header, nav, footer {
+      padding: 5px;
+    }
+    section {
+      padding: 10px;
+    }
+    body {
+      font-size: 14px;
+    }
+  }
+  

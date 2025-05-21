@@ -1,0 +1,94 @@
+<!-- html/form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vlad Moaca - Contact Form</title>
+  <link rel="stylesheet" type="text/css" href="../css/form.css">
+</head>
+<body>
+  <header id="form-header">
+    <h1>Contact Vlad Moaca</h1>
+  </header>
+  
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="form.html">Form</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="chatbot.html">Chatbot</a>
+  </nav>
+  
+  <main>
+    <section>
+      <form action="/submit" method="post" onsubmit="return validateForm()">
+        <p>
+          <label for="salutation">Salutation:</label>
+          <select name="salutation" id="salutation">
+            <option value="">--None--</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Ms.">Ms.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Dr.">Dr.</option>
+            <option value="Prof.">Prof.</option>
+          </select>
+        </p>
+        <p>
+          <label for="firstName">First Name:</label>
+          <input type="text" name="firstName" id="firstName" required>
+        </p>
+        <p>
+          <label for="lastName">Last Name:</label>
+          <input type="text" name="lastName" id="lastName" required>
+        </p>
+        <p>
+          Gender:
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+          <label for="birthDate">Date of Birth:</label>
+          <input type="date" name="birthDate" id="birthDate">
+        </p>
+        <p>
+          <label for="address">Address:</label>
+          <textarea name="address" id="address" cols="30" rows="3"></textarea>
+        </p>
+        <p>
+          <label for="country">Country:</label>
+          <select name="country" id="country">
+            <option value="">--Select Country--</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+          </select>
+        </p>
+        <p>
+          <label for="resume">Upload Resume:</label>
+          <input type="file" name="resume" id="resume">
+        </p>
+        <p>
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" cols="30" rows="5"></textarea>
+        </p>
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Vlad Moaca - Blog</p>
+  </footer>
+  
+  <script src="../js/form.js"></script>
+
+</body>
+</html>

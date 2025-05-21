@@ -1,0 +1,100 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+    transition: background-color 0.5s ease;
+  }
+  
+  header, nav, footer {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #main-header h1 {
+    margin: 0;
+    animation: slideIn 1s ease-out;
+  }
+  
+  nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #007BFF;
+  }
+  
+  main .post {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+  }
+  
+  main .post img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .post-meta {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    body {
+      margin: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav {
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    header, nav, footer {
+      padding: 5px;
+    }
+    main .post {
+      padding: 10px;
+    }
+    body {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ post.title }}</title>
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+  <a href="{% url 'myapp:home' %}">&larr; Back to Home</a>
+
+  <article class="post-detail">
+    <h1>{{ post.title }}</h1>
+    <p class="date">Posted on {{ post.post_date }}</p>
+    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="full-img">
+    <div class="content">
+      <p>{{ post.description }}</p>
+      <hr>
+      <h3>More Details</h3>
+    </div>
+  </article>
+</body>
+</html>
