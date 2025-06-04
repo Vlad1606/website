@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vlad Moaca - Blog</title>
+  <link rel="stylesheet" href="{% static 'myapp/css/index.css' %}" />
+</head>
+<body>
+  <div class="header">
+    <header id="main-header">
+      <h1>Welcome to Vlad Moaca's Blog</h1>
+    </header>
+    <input placeholder="Search posts" />
+    <button>Search</button>
+  </div>
+
+  <nav>
+    <a href="{% url 'myapp:home' %}">Home</a>
+    <a href="{% url 'myapp:about' %}">About</a>
+    <a href="{% url 'myapp:form' %}">Form</a>
+    <a href="{% url 'myapp:gallery' %}">Gallery</a>
+    <a href="{% url 'myapp:chatbot' %}">Chatbot</a>
+  </nav>
+
+  <main>
+    {% for post in posts %}
+      <article class="post">
+        <h2>{{ post.title }}</h2>
+        <p class="post-meta">By Vlad Moaca, Posted on {{ post.post_date|date:"F j, Y" }}</p>
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" />
+        <p>{{ post.description }}</p>
+      </article>
+    {% empty %}
+      <p>No posts yet.</p>
+    {% endfor %}
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Vlad Moaca - Blog</p>
+  </footer>
+</body>
+</html>
